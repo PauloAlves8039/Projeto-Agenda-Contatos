@@ -2,7 +2,7 @@
  * Arquivo: classe ManipuladorArquivos
  * Autor: Paulo Alves
  * Descrição: responsável pela manipulação de arquivos através de métodos para leitura e escrita
- * Data: 31/08/2019
+ * Data: 30/11/2019
 */
 
 using AgendaContatos.Entities;
