@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgendaContatos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pcbInformacao = new System.Windows.Forms.PictureBox();
@@ -56,6 +57,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbxContatos = new System.Windows.Forms.ListBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbInformacao)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -82,6 +84,7 @@
             this.pcbInformacao.Size = new System.Drawing.Size(48, 49);
             this.pcbInformacao.TabIndex = 2;
             this.pcbInformacao.TabStop = false;
+            this.pcbInformacao.Click += new System.EventHandler(this.pcbInformacao_Click);
             // 
             // statusStrip1
             // 
@@ -316,6 +319,11 @@
             this.lbxContatos.Size = new System.Drawing.Size(250, 199);
             this.lbxContatos.TabIndex = 0;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmAgendaContatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,6 +381,7 @@
         private System.Windows.Forms.MaskedTextBox mktTelefone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

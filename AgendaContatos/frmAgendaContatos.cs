@@ -142,5 +142,16 @@ namespace AgendaContatos
             txtEmail.Clear();
             mktTelefone.Clear();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel3.Text = DateTime.Now.ToShortDateString();
+            toolStripStatusLabel5.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void pcbInformacao_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Agenda de Contatos 1.0 \nDesenvolvido por: Paulo Alves", "Sobre");
+        }
     }
 }
