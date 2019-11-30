@@ -259,7 +259,7 @@
             this.mktTelefone.Location = new System.Drawing.Point(349, 71);
             this.mktTelefone.Mask = "(##)#####-####";
             this.mktTelefone.Name = "mktTelefone";
-            this.mktTelefone.Size = new System.Drawing.Size(81, 23);
+            this.mktTelefone.Size = new System.Drawing.Size(85, 23);
             this.mktTelefone.TabIndex = 6;
             // 
             // txtEmail
@@ -318,6 +318,7 @@
             this.lbxContatos.Name = "lbxContatos";
             this.lbxContatos.Size = new System.Drawing.Size(250, 199);
             this.lbxContatos.TabIndex = 0;
+            this.lbxContatos.SelectedIndexChanged += new System.EventHandler(this.lbxContatos_SelectedIndexChanged);
             // 
             // timer1
             // 

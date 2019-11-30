@@ -3,12 +3,6 @@ using AgendaContatos.Utils;
 using AgendaContatos.Utils.Enum;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AgendaContatos
@@ -48,7 +42,7 @@ namespace AgendaContatos
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tem ceretza?", "Pergunta", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Tem certeza?", "Pergunta", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 int indiceExcluido = lbxContatos.SelectedIndex;
                 lbxContatos.SelectedIndex = 0;
@@ -152,6 +146,14 @@ namespace AgendaContatos
         private void pcbInformacao_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Agenda de Contatos 1.0 \nDesenvolvido por: Paulo Alves", "Sobre");
+        }
+
+        private void lbxContatos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Contato contato = (Contato)lbxContatos.Items[lbxContatos.SelectedIndex];
+            txtNome.Text = contato.Nome;
+            txtEmail.Text = contato.Email;
+            mktTelefone.Text = contato.Telefone;
         }
     }
 }
